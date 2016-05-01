@@ -6,6 +6,6 @@ const {
 
 export default Route.extend({
   model() {
-    return this.store.findAll('book');
+    return this.store.findAll('user');
   }
 });

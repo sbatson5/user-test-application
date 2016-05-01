@@ -1,25 +1,25 @@
 module.exports = function(app) {
   var express = require('express');
   var router = express.Router();
-  var book = require('../json/book.json');
+  var user = require('../json/user.json');
 
   router.get('', function(req, res) {
-    res.send(book);
+    res.send(user);
   });
 
   router.get('/:id', function(req, res) {
     const id = req.id || 1;
 
-    book.data = book.data[id - 1];
-    res.send(book);
+    user.data = user.data[id - 1];
+    res.send(user);
   });
 
   router.patch('/:id', function(req, res) {
     const id = req.id || 1;
 
-    book.data = book.data[id - 1];
-    res.send(book, 204);
+    user.data = user.data[id - 1];
+    res.send(user, 204);
   });
 
-  app.use('/api/v1/books', router);
+  app.use('/api/v1/users', router);
 };
