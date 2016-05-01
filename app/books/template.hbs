@@ -1,3 +1,8 @@
+<h2 class="center-title">This is the books route</h2>
 {{#each model as |book|}}
   <h2>{{book.title}}</h2>
 {{/each}}
+
+<section class="container">
+  {{outlet}}
+</section>
