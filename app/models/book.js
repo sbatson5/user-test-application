@@ -8,5 +8,5 @@ export default Model.extend({
   genre: attr('string'),
   title: attr('string'),
   price: attr('number'),
-  description: attr('number')
+  description: attr('string')
 });
