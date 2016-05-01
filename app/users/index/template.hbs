@@ -1,5 +1,8 @@
-<h4>Index route</h4>
-{{#each users as |user|}}
-  <h2>{{user.email}}</h2>
-  <h2>{{user.firstName}}</h2>
+<h4>This is the index route where we see all the users</h4>
+{{#each users as |user index|}}
+  <h3>User number {{index}}</h3>
+  <h5>{{user.firstName}}</h5>
+  <h5>{{user.lastName}}</h5>
+  <h5>{{user.email}}</h5>
+  <h5>{{user.dateOfBirth}}</h5>
 {{/each}}
